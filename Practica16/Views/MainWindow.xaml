@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock Width="400" Text="Выберите арифметическую операцию"/>
+            <ComboBox ItemsSource="{Binding ComboChange}" Width="400" SelectedIndex="{Binding IndexSelected}"/>
+            <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBox Width="200" Text="{Binding FirstT}"   />
+
+                <TextBox  Width="200" Text="{Binding SecondT}"  />
+            </StackPanel>
+            <Button  Width="400" Command="{Binding Command}" Content="Вычислить"/>
+            <TextBlock Text ="Результат" Width="400" IsEnabled="False" />
+            <TextBlock Width="400" FontSize="20"  Text ="{Binding ResultT}" IsEnabled="False" />
+        </StackPanel>
     </Grid>
 </Window>
